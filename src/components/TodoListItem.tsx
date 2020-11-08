@@ -8,16 +8,11 @@ interface TodoListItemProps {
 }
 
 const TodoListItem = (props: TodoListItemProps) => {
-
   const { remove, toggle } = useContext<TodoContextType>(TodoContext);
 
-  const onRemove = (todo: Todo) => {
-    remove(todo);
-  };
+  const onRemove = (todo: Todo) => remove(todo);
 
-  const onChange = (todo: Todo) => {
-    toggle(todo)
-  };
+  const onChange = (todo: Todo) => toggle(todo);
 
   return (
     <tr className="uk-animation-slide-bottom-medium">
